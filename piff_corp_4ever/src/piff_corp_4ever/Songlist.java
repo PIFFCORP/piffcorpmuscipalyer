@@ -1,12 +1,13 @@
 package piff_corp_4ever;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
 public class Songlist {
+    static ArrayList<String> piff = new ArrayList<String>();
     public static void songs() {
 //ArrayList including Piff-Corp-Vol. 1 Songs along with scanner to be included in GUI
-    ArrayList<String> piff = new ArrayList<String>();
     @SuppressWarnings("resource")
     Scanner songresponse = new Scanner(System.in);
     piff.add("Birth of Piff");
@@ -34,12 +35,18 @@ public class Songlist {
     { System.out.println("sample text");}
 }
 
-
-
+public static List<String> getList(){
+    return piff;
+}
+public static String getSongFromList(int n) {
+    return piff.get(n);
+}
 
     public static void main (String[]args)
     {
+
         songs();
         new PiffGui2();
+
     }
     }
